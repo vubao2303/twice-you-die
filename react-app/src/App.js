@@ -22,9 +22,26 @@
 //   );
 // }
 
-import React, {component} from "react";
-function App (){
-  rerurn <HelloDiv />
+// import React, {component} from "react";
+// function App (){
+//   rerurn <HelloDiv />
+// }
+
+// export default App;
+
+import React from "react";
+import Header from "./components/header";
+// import Section from "./components/section";
+import Navbar from "./components/nav";
+
+function App() {
+  return (
+    <div>
+      <Navbar />
+      <Header />
+      {/* <Section /> */}
+    </div>
+  );
 }
 
 export default App;

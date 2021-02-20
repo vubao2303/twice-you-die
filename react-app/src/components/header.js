@@ -10,10 +10,11 @@ import "../style/style.css";
 
 const styles = {
   headerStyle: {
-    background: "purle"
+    background: "purle",
+    fontSize: 30
   },
   headingStyle: {
-    fontSize: 100
+    fontSize: 300
   }
 };
 
@@ -23,8 +24,8 @@ function Header() {
   return (
     // this { } is JSX, you can think of it as object deconstruction or dot notation, just know that, style.headerStyle, come from the object you created on line 11
     <header style={styles.headerStyle} className="header">
-      {/* same with this h1, styles.headingStyle is ob */}
-      <h1 style={styles.headingStyle}>Roses Are Thorny</h1>
+      Scores
+      
     </header>
   );
 }

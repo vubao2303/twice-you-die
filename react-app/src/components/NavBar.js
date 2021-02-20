@@ -10,8 +10,8 @@ import React from "react";
 
 const styles = {
   navbarStyle: {
-    background: "green",
-    justifyContent: "flex-end"//flex-end: items are packed toward to end line https://css-tricks.com/almanac/properties/j/justify-content/
+    background: "purple",
+    // justifyContent: "flex-end"//flex-end: items are packed toward to end line https://css-tricks.com/almanac/properties/j/justify-content/
   }
 };
 
@@ -20,7 +20,7 @@ const styles = {
 function Nav() {
   return (
     <nav style={styles.navbarStyle} className="navbar">
-      <a href="/">Scores</a>
+     <h1 style={styles.headingStyle}>A thorn defends the rose, touch it twice and you will die</h1>
     </nav>
   );
 }

@@ -27,29 +27,17 @@
 // }
 
 // export default Section;
-
+// rwp children 
 
 import React from "react";
 import "../style/style.css";
 
 function SectionImage(props) {
   return (
-    <div className="card">
-      <div className="img-container">
-        <img alt={props.name} src={props.image} />
-      </div>
-      <div className="content">
-        <ul>
-          <li>
-            <strong>Name:</strong> {props.name}
-          </li>
-         
-        </ul>
-      </div>
-      {/* this is where I have to handle what to do with the clicked */}
-      {/* <span onClick={() => props.removeFriend(props.id)} className="remove">
-        𝘅
-      </span> */}
+    <div>
+      <h1>Pictures of flowers</h1>
+      {/* chiren is th epictirecard */}
+      {props.children}
     </div>
   );
 }

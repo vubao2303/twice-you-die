@@ -2,14 +2,14 @@
   {
     "id": 1,
     "name": "rose1",
-    "image": "https://www.pexels.com/photo/selective-focus-photography-of-a-red-rose-593655/",
+    "image": "./style/images/rose1.jpeg",
     "click": true 
   },
   {
     "id": 2,
     "name": "rose2",
     "click": true,
-    "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014"
+    "image": "./style/images/rose2.jpeg"
   },
   {
     "id": 3,

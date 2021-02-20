@@ -2,26 +2,39 @@
   {
     "id": 1,
     "name": "rose1",
-    "image": "./style/images/rose1.jpeg",
+    "image": "https://images.pexels.com/photos/714918/pexels-photo-714918.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     "click": true 
   },
   {
     "id": 2,
     "name": "rose2",
     "click": true,
-    "image": "./style/images/rose2.jpeg"
+    "image": "https://images.pexels.com/photos/196664/pexels-photo-196664.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
   },
   {
     "id": 3,
     "name": "rose3",
     "click": true,
-    "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014"
+    "image": "https://images.pexels.com/photos/1019342/pexels-photo-1019342.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
   },
   {
     "id": 4,
     "name": "rose4",
     "click": true,
-    "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014"
+    "image": "https://images.pexels.com/photos/54320/rose-roses-flowers-red-54320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  {
+    "id": 5,
+    "name": "rose1",
+    "image": "https://images.pexels.com/photos/109813/pexels-photo-109813.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    "click": true 
+  },
+  {
+    "id": 6,
+    "name": "rose2",
+    "click": true,
+    "image": "https://images.pexels.com/photos/139099/pexels-photo-139099.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
   }
+
 
 ]

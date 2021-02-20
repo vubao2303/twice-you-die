@@ -34,10 +34,12 @@ import "../style/style.css";
 
 function SectionImage(props) {
   return (
-    <div>
-      <h1>Pictures of flowers</h1>
+    <div className= "container">
+    <div className= "row">
+      <h2 className="result"> YOU MUST DIE</h2>
       {/* chiren is th epictirecard */}
       {props.children}
+    </div>
     </div>
   );
 }

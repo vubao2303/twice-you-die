@@ -20,7 +20,7 @@ if you clicked twice, you die!
 ---
 
 ## Description of Page Building 
-* InstallCreate React App globally by running npx react-app in terminal
+* InstallCreate React App globally by running `npx create-react-app react-app` in terminal
 * In public folder contains the index.html file
    <ul> 
   <li> Bacic HTML doctype
@@ -44,26 +44,24 @@ if you clicked twice, you die!
 
   <li> Style folder contains style.css file to decorate the interface
   <li> App.js file
-  <li> 
-  <li> 
-  <li> 
+
+  - Setting State that includes images as a array, clicked set to false, count and top score started at 0, a message as an empty string. 
+  
+  - Add handleClick funtion so that it will add the score if the image first clied, set score to zero if the imgae is clicked twice, send result message, and shuffle the cards once the image is clicked 
+  
+  - Render all the necessary components to set up the page 
+
+  <li> images.json file contains all the roses pictures, each has an id, a name, an image link and a click with flase boleean value, 
+  <li> index.js file render App component and send it to html 
+  
   </li>
   </ul>
 
 
-* In another file 
-  <ul> 
-  <li> 
-  <li> 
-  <li> 
-  </li>
-   </ul>
-
-
 
 ## Code Snippet
-Install npm package 
-npm install express
+In terminal, run 
+`npx create-react-app react-app`
 
 To use components in  application
 ``` Javascript
@@ -82,7 +80,6 @@ ReactDOM.render(<App />, document.getElementById("root"));
       </div>
     )}
 ```
-
 
 Creates components as independent and reusable bits of code
 ``` Javascript

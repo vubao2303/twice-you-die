@@ -12,7 +12,9 @@ class App extends Component {
     images: pics,
     clicked: false,
     count: 0,
-    topScore: 0
+    topScore: 0,
+    message:""
+
   }
 
   handleClick = (id, click) => {
@@ -50,14 +52,21 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Header  message={this.state.message} Score= {this.state.count} TopScore= {this.state.topScore} />
         <NavBar />
-        <Header />
-        <Wrapper>
-          <p>{this.state.message}</p>
-          <p>Score: {this.state.count} | Top Score: {this.state.topScore}</p>
-
-          {/* <div className="row">
-          {console.log(this.state)} */}
+        
+        {/* <Wrapper >
+          return (
+        <p>message={this.state.message}</p>
+        
+          )
+        </Wrapper> */}
+        
+        <Wrapper  >
+       
+          
+          <div className="row">
+          {/* {console.log(this.state)} */}
 
           {/* <div className="row" id="inline"> */}
           {this.state.images.map(images => {
@@ -80,12 +89,13 @@ class App extends Component {
 
                 />
                 {/* // </div> */}
-                {/* // </div> */}
+               
               </>)
           })}
 
 
-        </Wrapper>
+         </div>
+         </Wrapper>
       </div>
     );
   };

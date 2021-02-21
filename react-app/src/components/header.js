@@ -20,14 +20,20 @@ const styles = {
 
 // We use JSX curly braces to evaluate the style object
 
-function Header() {
+function Header(props) {
   return (
     // this { } is JSX, you can think of it as object deconstruction or dot notation, just know that, style.headerStyle, come from the object you created on line 11
     <header style={styles.headerStyle} className="header">
+      
+      
       <div className="row">
 
-      <div className="announce"> your result, rigth or wrong </div>
-      <div> score: | top score: </div>
+      <div className="announce"> 
+      {props.message}
+      <div ></div>
+         </div>
+      <div> score: {props.Score}| top score: {props.TopScore} </div>
+
       </div>
       
     </header>

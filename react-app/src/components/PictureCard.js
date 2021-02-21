@@ -10,20 +10,22 @@ import React from 'react'
 import "../style/style.css";
 function  PictureCard(props) {
     return (
-      <div className= "col-md-4">
+      // <div className="row">
+      <div className= "col-3">
       <div id={props.id}>
-      {console.log(props)}
+      {/* {console.log(props)}
       {console.log("banana")}
-      
-      <div className="img-container" onClick={() => props. shuffleRoses(props.id)} className="shuffle">
-        <img height="150" width= "250" alt="rose1" src= {props.image} />
+       */}
+      <div className="img-container">
+        <img onClick={() => props.click(props.id)} className="shuffle" height="150" width= "250" alt="rose1" src= {props.image} />
       </div>
-      <div className="content">
+      {/* <div className="content">
        
-      </div>
+      </div> */}
      
     </div>
     </div>
+    // </div>
     )
   
 }

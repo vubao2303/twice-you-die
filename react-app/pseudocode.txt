@@ -1,0 +1,13 @@
+if  score === 0 {
+  alert! you touch the same roses, you are dead 
+}
+
+if score === 16 {
+  alert(you and your delicate brain saved yourself and the rose! We thank you )
+}
+
+if (!clicked twice){
+  score += 1
+}
+
+

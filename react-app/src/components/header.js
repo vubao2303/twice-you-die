@@ -26,8 +26,8 @@ function Header() {
     <header style={styles.headerStyle} className="header">
       <div className="row">
 
-      <div className="anounce"> your result, rigth or wrong </div>
-      <div> your score: </div>
+      <div className="announce"> your result, rigth or wrong </div>
+      <div> score: | top score: </div>
       </div>
       
     </header>

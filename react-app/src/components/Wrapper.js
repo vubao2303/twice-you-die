@@ -35,11 +35,11 @@ import "../style/style.css";
 function SectionImage(props) {
   return (
     <div className= "container">
-    <div className= "row">
+    {/* <div className= "row"> */}
       <h2 className="result"> YOU MUST DIE</h2>
       {/* chiren is th epictirecard */}
       {props.children}
-    </div>
+    {/* </div> */}
     </div>
   );
 }

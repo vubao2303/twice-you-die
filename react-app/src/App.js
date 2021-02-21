@@ -1,5 +1,5 @@
-
 import React, { Component } from "react";
+// another way to do this is import React from react then on line 9, do class App extends React.Component
 import PictureCard from "./components/PictureCard";
 import Wrapper from "./components/Wrapper";
 import Header from "./components/Header";
@@ -7,53 +7,16 @@ import NavBar from "./components/NavBar";
 import pics from "./images.json";
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
+  // Setting this.state.images to the images json array
   state = {
     images: pics,
     clicked: false,
-    count:0,
-    topScore:0
+    count: 0,
+    topScore: 0
   }
-
-  // shuffleRoses = () => {
-  //   this.setState({
-  //     images: this.state.images.sort(function (a, b) {
-  //       return 0.5 - Math.random()
-  //     }
-  //     )
-  //   })
-  // }
-
-  handleClickOnce = ()=>{
-    this.setState({
-      count: this.state.count +1,
-      message: "good job "
-    })
-  }
-
-  // handleClickTwice = ()=> {
-  //   this.setState({
-  //     count: 0,
-  //     message: "you must die"
-  //   })
-  // }
-
-  handleDecrement = () => {
-    // We always use the setState method to update a component's state
-    if(this.state.count > 0){
-      this.setState({ count: this.state.count - 1 });
-    }
-    
-  };
-  handleIncrement = () => {
-    // We always use the setState method to update a component's state
-    this.setState({ score: this.state.count + 1 });
-  };
 
   handleClick = (id, click) => {
-
     const roses = this.state.images;
-
     if (click) {
       roses.forEach((image, index) => {
         roses[index].click = false;
@@ -70,26 +33,20 @@ class App extends Component {
       roses.forEach((image, index) => {
         if (id === image.id) {
           roses[index].click = true;
-      // const { score } = this.state;
-      // console.log (score)
-      // const goodState = this.state.count + 1;
-      const newScore = this.state.count + 1;
-      // const newTopscore=this.state.topScore
+          const newScore = this.state.count + 1;
+          const newTopScore = newScore > this.state.topScore ? newScore : this.state.topScore;
 
-      // console.log (newScore)
-      const newTopScore = newScore > this.state.topScore ? newScore : this.state.topScore;
-
-      return this.setState({
-        image: roses.sort(() => Math.random() - 0.5),
-        message: "You Guessed Correctly!",
-        count: newScore,
-        topScore: newTopScore,
-      })
-    }
-  });
+          return this.setState({
+            image: roses.sort(() => Math.random() - 0.5),
+            message: "You Guessed Correctly!",
+            count: newScore,
+            topScore: newTopScore,
+          })
+        }
+      });
     }
   };
-  
+
   render() {
     return (
       <div>
@@ -97,7 +54,7 @@ class App extends Component {
         <Header />
         <Wrapper>
           <p>{this.state.message}</p>
-        <p>Score: {this.state.count} | Top Score: {this.state.topScore}</p>
+          <p>Score: {this.state.count} | Top Score: {this.state.topScore}</p>
 
           {/* <div className="row">
           {console.log(this.state)} */}
@@ -117,9 +74,9 @@ class App extends Component {
                   image={images.image}
                   click={images.click}
 
-                  
-                handleClick={this.handleClick}
-                // handleIncrement={this.handleIncrement}
+
+                  handleClick={this.handleClick}
+
 
                 />
                 {/* // </div> */}
@@ -135,6 +92,45 @@ class App extends Component {
 };
 
 export default App;
+
+
+
+// all the function breakdown
+// shuffleRoses = () => {
+  //   this.setState({
+  //     images: this.state.images.sort(function (a, b) {
+  //       return 0.5 - Math.random()
+  //     }
+  //     )
+  //   })
+  // }
+
+  // handleClickOnce = ()=>{
+  //   this.setState({
+  //     count: this.state.count +1,
+  //     message: "good job "
+  //   })
+  // }
+
+  // handleClickTwice = ()=> {
+  //   this.setState({
+  //     count: 0,
+  //     message: "you must die"
+  //   })
+  // }
+
+  // handleDecrement = () => {
+  //   // We always use the setState method to update a component's state
+  //   if(this.state.count > 0){
+  //     this.setState({ count: this.state.count - 1 });
+  //   }
+
+  // };
+  // handleIncrement = () => {
+  //   // We always use the setState method to update a component's state
+  //   this.setState({ score: this.state.count + 1 });
+  // };
+
 
   // handleClick = (id, clicked) => {
 

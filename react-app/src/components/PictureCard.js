@@ -1,11 +1,3 @@
-// import React from "react";
-// you dont need line 2 bc app is already give us that data
-// import pictures from "../style/images/rose1.jpeg"
-
-// pass data into source 
-// we pass data by.... 
-// we passs data props by {}
-// don't mix with class wiht function
 import React from 'react'
 import "../style/style.css";
 function  PictureCard(props) {
@@ -19,17 +11,25 @@ function  PictureCard(props) {
       <div className="img-container">
         <img onClick={() => props.handleClick(props.id, props.click)} className="shuffle" height="150" width= "250" alt="rose1" src= {props.image} />
       </div>
-      {/* <div className="content">
-       
-      </div> */}
      
     </div>
     </div>
     // </div>
     )
-  
 }
+export default PictureCard;
 
+
+// import React from "react";
+// you dont need line 2 bc app is already give us that data
+// import pictures from "../style/images/rose1.jpeg"
+
+// pass data into source 
+// we pass data by.... 
+// we passs data props by {}
+// don't mix with class wiht function
+
+// calling multiple function in react
 // onClick={() => {
 //   greeting();
 //   waveHello();
@@ -61,5 +61,3 @@ function  PictureCard(props) {
 //     </div>
 //   );
 // }
-
-export default PictureCard;

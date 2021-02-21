@@ -12,6 +12,41 @@ class App extends Component {
     images: images
   };
 
+//   newCards = id => {
+//     console.log (id)
+//     const images = this.state.images.shuffle(images=>)
+//     // if clicked twice 
+//     // you must die 
+//     // else shuffle
+
+//   }
+
+//   shuffle = id => {
+//     this.setState({
+//         images: this.state.images.sort(function(a,b){
+//                 return 0.5 - Math.random();
+//             }
+//         )
+//     })
+// }
+
+
+  shuffleRoses(images) {
+  for (let i = images.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [images[i], images[j]] = [images[j], images[i]];
+  }
+}
+  // changeScore= score =>{
+  //   consolesole.log(score)
+  // }
+  // removeFriend = id => {
+  //   // Filter this.state.friends for friends with an id not equal to the id being removed
+  //   const friends = this.state.friends.filter(friend => friend.id !== id);
+  //   // Set this.state.friends equal to the new friends array
+  //   this.setState({ friends: friends });
+  // };
+
   render() {
     return (
       <div>
@@ -30,6 +65,7 @@ class App extends Component {
             key={images.id}
             name={images.name}
             image={images.image}
+            shuffleRoses= {this.shuffleRoses}
            
           />
           </>)

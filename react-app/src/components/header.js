@@ -24,7 +24,11 @@ function Header() {
   return (
     // this { } is JSX, you can think of it as object deconstruction or dot notation, just know that, style.headerStyle, come from the object you created on line 11
     <header style={styles.headerStyle} className="header">
-      Scores
+      <div className="row">
+
+      <div className="anounce"> your result, rigth or wrong </div>
+      <div> your score: </div>
+      </div>
       
     </header>
   );

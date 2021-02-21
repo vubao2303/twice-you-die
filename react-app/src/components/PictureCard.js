@@ -15,15 +15,13 @@ function  PictureCard(props) {
       {console.log(props)}
       {console.log("banana")}
       
-      <div className="img-container">
+      <div className="img-container" onClick={() => props. shuffleRoses(props.id)} className="shuffle">
         <img height="150" width= "250" alt="rose1" src= {props.image} />
       </div>
       <div className="content">
        
       </div>
-      {/* <span onClick={() => props.removeFriend(props.id)} className="remove">
-        𝘅
-      </span> */}
+     
     </div>
     </div>
     )

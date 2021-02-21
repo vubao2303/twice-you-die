@@ -14,7 +14,7 @@ const styles = {
     fontSize: 30
   },
   headingStyle: {
-    fontSize: 300
+    fontSize: 100
   }
 };
 
@@ -26,16 +26,7 @@ function Header(props) {
     <header style={styles.headerStyle} className="header">
       
       
-      <div className="row">
-
-      <div className="announce"> 
-      {props.message}
-      <div ></div>
-         </div>
-      <div> score: {props.Score}| top score: {props.TopScore} </div>
-
-      </div>
-      
+      <h1 style={styles.headingStyle}>A thorn defends the rose, touch it twice and you will die</h1>
     </header>
   );
 }

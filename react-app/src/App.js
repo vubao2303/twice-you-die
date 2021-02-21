@@ -52,15 +52,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header  message={this.state.message} Score= {this.state.count} TopScore= {this.state.topScore} />
-        <NavBar />
+        <Header   />
+        <NavBar message={this.state.message} Score= {this.state.count} TopScore= {this.state.topScore} />
         
-        {/* <Wrapper >
-          return (
-        <p>message={this.state.message}</p>
-        
-          )
-        </Wrapper> */}
         
         <Wrapper  >
        

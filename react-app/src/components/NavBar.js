@@ -11,16 +11,28 @@ import React from "react";
 const styles = {
   navbarStyle: {
     background: "purple",
+    fontSize: 100
     // justifyContent: "flex-end"//flex-end: items are packed toward to end line https://css-tricks.com/almanac/properties/j/justify-content/
   }
 };
 
 // We use JSX curly braces to evaluate the style object on the JSX tag
 
-function Nav() {
+function Nav(props) {
   return (
     <nav style={styles.navbarStyle} className="navbar">
-     <h1 style={styles.headingStyle}>A thorn defends the rose, touch it twice and you will die</h1>
+
+<div className="row">
+
+<div className="announce"> 
+{props.message}
+
+   </div>
+<div> Score: {props.Score}| Top score: {props.TopScore} </div>
+
+</div>
+
+    
     </nav>
   );
 }

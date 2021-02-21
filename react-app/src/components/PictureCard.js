@@ -14,8 +14,8 @@ function  PictureCard(props) {
       <div className= "col-3">
       <div id={props.id}>
       {/* {console.log(props)}
-      {console.log("banana")}
-       */}
+      {console.log("banana")} */}
+      
       <div className="img-container">
         <img onClick={() => props.handleClick(props.id, props.click)} className="shuffle" height="150" width= "250" alt="rose1" src= {props.image} />
       </div>

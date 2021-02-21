@@ -52,7 +52,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header   />
+        <Header />
         <NavBar message={this.state.message} Score= {this.state.count} TopScore= {this.state.topScore} />
         
         

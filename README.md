@@ -20,16 +20,30 @@ if you clicked twice, you die!
 ---
 
 ## Description of Page Building 
-* In one file
+* InstallCreate React App globally by running npx react-app in terminal
+* In public folder contains the index.html file
    <ul> 
-  <li> 
-  <li> 
-  <li> 
+  <li> Bacic HTML doctype
+  <li> Add bootstrap access link 
+  <li> Contains root id so we can use to twist the page 
+
   </li>
   </ul>
 
-* In another 
+* In src (source) folder
   <ul> 
+  <li> Component folders 
+
+  - Header.js file has header style and the rule of the game
+  
+  - NavBar.js file uses score, topScore, and  message props that passed from App.js
+  
+  - PictureCards.js file grabs id, image, and handleClick function from App.js and uses as props to populate the cards on the page 
+  
+  - Wrapper.js file acts as a container for PictureCards 
+
+  <li> Style folder contains style.css file to decorate the interface
+  <li> App.js file
   <li> 
   <li> 
   <li> 
@@ -51,26 +65,65 @@ if you clicked twice, you die!
 Install npm package 
 npm install express
 
-Required variables 
+To use components in  application
 ``` Javascript
-
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
-Sets up the Express app to handle data parsing
 ``` Javascript
-
+  render() {
+    return (
+      <div>
+      <Header />
+      <NavBar />
+      <Wrapper>
+        <PictureCard />
+      </Wrapper> 
+      </div>
+    )}
 ```
 
-Set routes to handle when user "visit" the page 
-``` Javascript
 
+Creates components as independent and reusable bits of code
+``` Javascript
+function PictureCard(props) {
+    return (
+      <div className="img-container">
+        <img onClick={() => props.handleClick(props.id, props.click)} className="shuffle" height="150" width= "250" alt="rose1" src= {props.image} />
+      </div> )}
+export default PictureCard;
+``` 
+``` Javascript
+function Nav(props) {
+  return (
+    <nav style={styles.navbarStyle} className="navbar">
+      <div> {props.message} </div>
+      <div> Score: {props.Score}| Top score: {props.TopScore} </div>
+    </nav> );}
+export default Nav;
+``` 
+
+Import react and other components to App.js file
+``` Javascript
+import React, { Component } from "react";
+import PictureCard from "./components/PictureCard";
+import Wrapper from "./components/Wrapper";
+import Header from "./components/Header";
+import NavBar from "./components/NavBar";
+import pics from "./images.json";
 ```
 
-do this because 
+Set property in App.js file to send to other components 
 ``` Javascript 
+ <PictureCard
+  id={images.id}
+  key={images.id}
+  name={images.name}
+  image={images.image}
+  click={images.click}
+  handleClick={this.handleClick} />
+```
 
-```
-```
 ## Technologies Used
 
 ||||||

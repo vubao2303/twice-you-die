@@ -30,7 +30,11 @@ function  PictureCard(props) {
   
 }
 
-// if you are using this, it is always class 
+// onClick={() => {
+//   greeting();
+//   waveHello();
+// }}>
+// // if you are using this, it is always class 
 // function pictureCard(props) {
 //   // you can only get whatever we send to it from APPs 
 //   // in thsi case you have 4

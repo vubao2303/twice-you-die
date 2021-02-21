@@ -11,7 +11,7 @@ class App extends Component {
   state = {
     images: pics,
     clicked: false,
-    count: 0
+    count:0
   }
 
   // shuffleRoses = () => {
@@ -37,42 +37,53 @@ class App extends Component {
   //   })
   // }
 
-
+  handleDecrement = () => {
+    // We always use the setState method to update a component's state
+    if(this.state.count > 0){
+      this.setState({ count: this.state.count - 1 });
+    }
+    
+  };
+  handleIncrement = () => {
+    // We always use the setState method to update a component's state
+    this.setState({ score: this.state.count + 1 });
+  };
 
   handleClick = (id, click) => {
 
-    const imageOrder = this.state.images;
+    const roses = this.state.images;
 
     if (click) {
-      imageOrder.forEach((image, index) => {
-        imageOrder[index].click = false;
+      roses.forEach((image, index) => {
+        roses[index].click = false;
       });
       return this.setState({
-        image: imageOrder.sort(() => Math.random() - 0.5),
-        message: "You Guessed Incorrectly!",
-        score: 0
+        images: roses.sort(() => Math.random() - 0.5),
+        message: "You are dead!",
+        count: 0
       })
     }
 
-
-
     else {
-      imageOrder.forEach((image, index) => {
+      // {this.handleIncrement()}
+      roses.forEach((image, index) => {
         if (id === image.id) {
-          imageOrder[index].click = true;
-        }
-      });
-
-      const { topScore, score } = this.state;
-      const newScore = this.state.count + 1;
-      const newTopScore = newScore > topScore ? newScore : topScore;
+          roses[index].click = true;
+      // const { score } = this.state;
+      // console.log (score)
+      // const goodState = this.state.count + 1;
+      // const newScore = this.state.count + 1;
+      // console.log (newScore)
+      // const newTopScore = newScore > topScore ? newScore : topScore;
 
       return this.setState({
-        image: imageOrder.sort(() => Math.random() - 0.5),
+        image: roses.sort(() => Math.random() - 0.5),
         message: "You Guessed Correctly!",
-        score: newScore,
-        topScore: newTopScore,
+        count: this.state.count +1,
+        // topScore: newTopScore,
       })
+    }
+  });
     }
   };
   
@@ -83,7 +94,7 @@ class App extends Component {
         <Header />
         <Wrapper>
           <p>{this.state.message}</p>
-        <p>Score: {this.state.score} | Top Score: {this.state.topScore}</p>
+        <p>Score: {this.state.count} | Top Score: {this.state.topScore}</p>
 
           {/* <div className="row">
           {console.log(this.state)} */}
@@ -102,7 +113,10 @@ class App extends Component {
                   name={images.name}
                   image={images.image}
                   click={images.click}
+
+                  
                 handleClick={this.handleClick}
+                // handleIncrement={this.handleIncrement}
 
                 />
                 {/* // </div> */}

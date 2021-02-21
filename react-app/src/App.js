@@ -14,14 +14,14 @@ class App extends Component {
     count: 0
   }
 
-  shuffleRoses = () => {
-    this.setState({
-      images: this.state.images.sort(function (a, b) {
-        return 0.5 - Math.random()
-      }
-      )
-    })
-  }
+  // shuffleRoses = () => {
+  //   this.setState({
+  //     images: this.state.images.sort(function (a, b) {
+  //       return 0.5 - Math.random()
+  //     }
+  //     )
+  //   })
+  // }
 
   handleClickOnce = ()=>{
     this.setState({
@@ -30,22 +30,60 @@ class App extends Component {
     })
   }
 
-  handleClickTwice = ()=> {
-    this.setState({
-      count: 0,
-      message: "you must die"
-    })
-  }
+  // handleClickTwice = ()=> {
+  //   this.setState({
+  //     count: 0,
+  //     message: "you must die"
+  //   })
+  // }
 
 
+
+  handleClick = (id, click) => {
+
+    const imageOrder = this.state.images;
+
+    if (click) {
+      imageOrder.forEach((image, index) => {
+        imageOrder[index].click = false;
+      });
+      return this.setState({
+        image: imageOrder.sort(() => Math.random() - 0.5),
+        message: "You Guessed Incorrectly!",
+        score: 0
+      })
+    }
+
+
+
+    else {
+      imageOrder.forEach((image, index) => {
+        if (id === image.id) {
+          imageOrder[index].click = true;
+        }
+      });
+
+      const { topScore, score } = this.state;
+      const newScore = this.state.count + 1;
+      const newTopScore = newScore > topScore ? newScore : topScore;
+
+      return this.setState({
+        image: imageOrder.sort(() => Math.random() - 0.5),
+        message: "You Guessed Correctly!",
+        score: newScore,
+        topScore: newTopScore,
+      })
+    }
+  };
+  
   render() {
     return (
       <div>
         <NavBar />
         <Header />
         <Wrapper>
-          {/* <p>{this.state.message}</p>
-        <p>Score: {this.state.score} | Top Score: {this.state.topScore}</p> */}
+          <p>{this.state.message}</p>
+        <p>Score: {this.state.score} | Top Score: {this.state.topScore}</p>
 
           {/* <div className="row">
           {console.log(this.state)} */}
@@ -63,8 +101,8 @@ class App extends Component {
                   key={images.id}
                   name={images.name}
                   image={images.image}
-                  click={this.shuffleRoses}
-                // click={this.handleClick}
+                  click={images.click}
+                handleClick={this.handleClick}
 
                 />
                 {/* // </div> */}

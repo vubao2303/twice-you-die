@@ -11,7 +11,8 @@ class App extends Component {
   state = {
     images: pics,
     clicked: false,
-    count:0
+    count:0,
+    topScore:0
   }
 
   // shuffleRoses = () => {
@@ -72,15 +73,17 @@ class App extends Component {
       // const { score } = this.state;
       // console.log (score)
       // const goodState = this.state.count + 1;
-      // const newScore = this.state.count + 1;
+      const newScore = this.state.count + 1;
+      // const newTopscore=this.state.topScore
+
       // console.log (newScore)
-      // const newTopScore = newScore > topScore ? newScore : topScore;
+      const newTopScore = newScore > this.state.topScore ? newScore : this.state.topScore;
 
       return this.setState({
         image: roses.sort(() => Math.random() - 0.5),
         message: "You Guessed Correctly!",
-        count: this.state.count +1,
-        // topScore: newTopScore,
+        count: newScore,
+        topScore: newTopScore,
       })
     }
   });

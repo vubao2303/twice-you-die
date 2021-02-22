@@ -1,4 +1,6 @@
 import React from "react";
+import "../style/style.css";
+
 // import "../styles/Navbar.css";
 
 // By importing the Navbar.css file, it is added to the DOM whenever this component loads
@@ -10,8 +12,10 @@ import React from "react";
 
 const styles = {
   navbarStyle: {
-    background: "purple",
-    fontSize: 100
+    // background: "purple",
+    justifyContent: "flex-end"
+    // fontSize: 100,
+
     // justifyContent: "flex-end"//flex-end: items are packed toward to end line https://css-tricks.com/almanac/properties/j/justify-content/
   }
 };
@@ -21,18 +25,13 @@ const styles = {
 function Nav(props) {
   return (
     <nav style={styles.navbarStyle} className="navbar">
+<div> {props.messsgreenguy} </div> 
 
-<div className="row">
 
-<div className="announce"> 
-{props.message}
+      <h3 style={styles.headingStyle}>A thorn defends the rose, touch it twice and you will die</h3>
 
-   </div>
-<div> Score: {props.Score}| Top score: {props.TopScore} </div>
 
-</div>
 
-    
     </nav>
   );
 }

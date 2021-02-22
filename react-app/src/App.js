@@ -9,14 +9,13 @@ import pics from "./images.json";
 class App extends Component {
   // Setting this.state.images to the images json array
   state = {
-    images: pics,
+    images: pics,//represnt the array of imgaes 
     clicked: false,
     count: 0,
     topScore: 0,
     message:""
-
   }
-
+  // set the id and click as parameter for this handle function so we can call it later in picure card
   handleClick = (id, click) => {
     const roses = this.state.images;
     if (click) {
@@ -25,7 +24,7 @@ class App extends Component {
       });
       return this.setState({
         images: roses.sort(() => Math.random() - 0.5),
-        message: "You are dead!",
+        message: "You Are Dead (>_<) Play Again!",
         count: 0
       })
     }
@@ -33,11 +32,13 @@ class App extends Component {
     else {
       // {this.handleIncrement()}
       roses.forEach((image, index) => {
+        // if the id is clicke, which mean that clicked index is the same as id 
         if (id === image.id) {
           roses[index].click = true;
           const newScore = this.state.count + 1;
+          // if newScore is grater than topscore (?do) set newTopScore to newscore (:else, aka if newScore is equal or less than topScore, keep theo topScore
           const newTopScore = newScore > this.state.topScore ? newScore : this.state.topScore;
-
+            // return the new state
           return this.setState({
             image: roses.sort(() => Math.random() - 0.5),
             message: "You Guessed Correctly!",
@@ -52,13 +53,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header />
-        <NavBar message={this.state.message} Score= {this.state.count} TopScore= {this.state.topScore} />
+        <NavBar  />
+        <Header message={this.state.message} Score= {this.state.count} TopScore= {this.state.topScore}/>
+        <div className="container">
         
-        
-        <Wrapper  >
-       
-          
+        <Wrapper className="container">
           <div className="row">
           {/* {console.log(this.state)} */}
 
@@ -76,26 +75,23 @@ class App extends Component {
                   name={images.name}
                   image={images.image}
                   click={images.click}
-
-
                   handleClick={this.handleClick}
-
-
                 />
                 {/* // </div> */}
-               
               </>)
           })}
-
-
-         </div>
-         </Wrapper>
+          </div>
+        </Wrapper>
+        
+        </div>
       </div>
     );
   };
 };
 
 export default App;
+
+
 
 
 

@@ -2,7 +2,7 @@
 if you clicked twice, you die! 
 
 
-![Site Picture]()
+![Site Picture](./react-app/src/style/roses.gif)
 ![Site Picture]()
 
 

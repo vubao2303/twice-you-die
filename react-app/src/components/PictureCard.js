@@ -3,7 +3,7 @@ import "../style/style.css";
 function  PictureCard(props) {
     return (
       // <div className="row">
-      <div className= "col-3">
+      <div className= "col-md-3 click-item">
       <div id={props.id}>
       {/* {console.log(props)}
       {console.log("banana")} */}

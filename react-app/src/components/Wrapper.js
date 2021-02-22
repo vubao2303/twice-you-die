@@ -36,7 +36,7 @@ function SectionImage(props) {
   return (
     <div className= "container">
     {/* <div className= "row"> */}
-      <h2 className="result"> </h2>
+      {/* <h2 className="result"> YOU MUST DIE</h2> */}
       {/* chiren is th epictirecard */}
       {props.children}
     {/* </div> */}

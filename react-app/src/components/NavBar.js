@@ -25,7 +25,7 @@ const styles = {
 function Nav(props) {
   return (
     <nav style={styles.navbarStyle} className="navbar">
-      <a href="/">Clicky Game</a>
+      <a href="/twice-you-die">Clicky Game</a>
 
 
 

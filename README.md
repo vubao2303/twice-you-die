@@ -1,5 +1,5 @@
 # twice-you-die
-if you clicked twice, you die! 
+if you clicked twice, you die! This is a react based brain teaser web application that allows you test your memorization. The object of the game is to click on only one image once. If you repeat guesses, the poistion thorns from the roses kill you and the score is reset to 0
 
 
 ![Demo Gif](./react-app/src/style/roses.gif)

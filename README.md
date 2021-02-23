@@ -2,13 +2,13 @@
 if you clicked twice, you die! 
 
 
-![Site Picture](./react-app/src/style/roses.gif)
-![Site Picture]()
+![Demo Gif](./react-app/src/style/roses.gif)
 
 
-## Heroku-Deployed
 
-[Deployed Link]()  
+## Deployed-Link
+
+[Deployed Link](https://vubao2303.github.io/twice-you-die/)  
 
 # Table of Contents 
 

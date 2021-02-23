@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/twice-you-die/static/css/main.a3cc29d7.chunk.css",
+    "main.js": "/twice-you-die/static/js/main.ce67177c.chunk.js",
+    "main.js.map": "/twice-you-die/static/js/main.ce67177c.chunk.js.map",
+    "runtime-main.js": "/twice-you-die/static/js/runtime-main.d23f385a.js",
+    "runtime-main.js.map": "/twice-you-die/static/js/runtime-main.d23f385a.js.map",
+    "static/js/2.8fd65cbe.chunk.js": "/twice-you-die/static/js/2.8fd65cbe.chunk.js",
+    "static/js/2.8fd65cbe.chunk.js.map": "/twice-you-die/static/js/2.8fd65cbe.chunk.js.map",
+    "index.html": "/twice-you-die/index.html",
+    "static/css/main.a3cc29d7.chunk.css.map": "/twice-you-die/static/css/main.a3cc29d7.chunk.css.map",
+    "static/js/2.8fd65cbe.chunk.js.LICENSE.txt": "/twice-you-die/static/js/2.8fd65cbe.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/twice-you-die/static/media/petals.a4ff7f5b.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d23f385a.js",
+    "static/js/2.8fd65cbe.chunk.js",
+    "static/css/main.a3cc29d7.chunk.css",
+    "static/js/main.ce67177c.chunk.js"
+  ]
+}

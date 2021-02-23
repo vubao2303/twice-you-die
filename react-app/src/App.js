@@ -13,8 +13,11 @@ class App extends Component {
     clicked: false,
     count: 0,
     topScore: 0,
-    message:""
+    message:"Click the roses once to gain point"
   }
+
+
+
   // set the id and click as parameter for this handle function so we can call it later in picure card
   handleClick = (id, click) => {
     const roses = this.state.images;
@@ -32,7 +35,7 @@ class App extends Component {
     else {
       // {this.handleIncrement()}
       roses.forEach((image, index) => {
-        // if the id is clicke, which mean that clicked index is the same as id 
+        // if the id is clicke, which mean that clicked index is the same as id z
         if (id === image.id) {
           roses[index].click = true;
           const newScore = this.state.count + 1;
@@ -95,41 +98,42 @@ export default App;
 
 
 
-// all the function breakdown
+// // all the function breakdown
 // shuffleRoses = () => {
-  //   this.setState({
-  //     images: this.state.images.sort(function (a, b) {
-  //       return 0.5 - Math.random()
-  //     }
-  //     )
-  //   })
-  // }
+//     this.setState({
+//       images: this.state.images.sort(function (a, b) {
+//         return 0.5 - Math.random()
+//       }
+//       )
+//     })
+//   }
 
-  // handleClickOnce = ()=>{
-  //   this.setState({
-  //     count: this.state.count +1,
-  //     message: "good job "
-  //   })
-  // }
 
-  // handleClickTwice = ()=> {
-  //   this.setState({
-  //     count: 0,
-  //     message: "you must die"
-  //   })
-  // }
+//   handleClickOnce = ()=>{
+//     this.setState({
+//       count: this.state.count +1,
+//       message: "good job "
+//     })
+//   }
 
-  // handleDecrement = () => {
-  //   // We always use the setState method to update a component's state
-  //   if(this.state.count > 0){
-  //     this.setState({ count: this.state.count - 1 });
-  //   }
+//   handleClickTwice = ()=> {
+//     this.setState({
+//       count: 0,
+//       message: "you must die"
+//     })
+//   }
 
-  // };
-  // handleIncrement = () => {
-  //   // We always use the setState method to update a component's state
-  //   this.setState({ score: this.state.count + 1 });
-  // };
+//   handleDecrement = () => {
+//     // We always use the setState method to update a component's state
+//     if(this.state.count > 0){
+//       this.setState({ count: this.state.count - 1 });
+//     }
+
+//   };
+//   handleIncrement = () => {
+//     // We always use the setState method to update a component's state
+//     this.setState({ score: this.state.count + 1 });
+//   };
 
 
   // handleClick = (id, clicked) => {
